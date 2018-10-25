@@ -12,7 +12,7 @@ clientname = event["client"]["name"]
 
 #deregister the client
 c = pycurl.Curl()
-c.setopt(c.URL, "http://<SENSUAPIHERE>/clients/{}".format( clientname ))
+c.setopt(c.URL, "https://<SENSUAPIHERE>/clients/{}".format( clientname ))
 c.setopt(c.CUSTOMREQUEST, "DELETE")
 c.setopt(c.TIMEOUT, 20)
 c.setopt(c.USERPWD, "username:password")
